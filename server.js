@@ -8,6 +8,10 @@ app.use(express.static('public'))
 
 function middleware(req, res, next) {
   console.log('HIT THE MIDDLEWARE')
+  const { id } = req.params
+  if(id != 8) {
+    return res.sendStatus(403)
+  }
   next()
 }
 
@@ -36,9 +40,9 @@ app.put('/api', middleware, (req, res) => {
   res.sendStatus(200)
 })
 
-app.delete('/delete/:id/:name', middleware, (req, res) => {
-  const { id, name } = req.params
-  console.log('want to delete what? ', id, name)
+app.delete('/delete/:id', middleware, (req, res) => {
+  const { id } = req.params
+  console.log('want to delete what? ', id)
   res.sendStatus(200)
 })
 

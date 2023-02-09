@@ -14,4 +14,4 @@ PUT http://localhost:4000/api/?word=tiago&potato=something
 
 
 ###
-DELETE http://localhost:4000/delete/4/nice
+DELETE http://localhost:4000/delete/9
