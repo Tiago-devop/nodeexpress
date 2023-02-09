@@ -10,8 +10,8 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:4000
+PUT http://localhost:4000/api/?word=tiago&potato=something
 
 
 ###
-PUT http://localhost:4000
+DELETE http://localhost:4000/delete/4/nice
